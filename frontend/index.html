@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Watch</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">C</div>
+                <h2>CampusWatch</h2>
+            </div>
+
+            <p class="sidebar-description">
+                Campus Watch
+            </p>
+
+
+            <!-- Navigation -->
+            <nav class="sidebar-nav">
+
+                <a href="index.html" class="nav-link active">
+                    <span>⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="systems.html" class="nav-link">
+                    <span>▣</span>
+                    <span>System List</span>
+                </a>
+
+                <a href="clusters.html" class="nav-link">
+                    <span>▦</span>
+                    <span>Cluster View</span>
+                </a>
+
+                <a href="system-details.html" class="nav-link">
+                    <span>▤</span>
+                    <span>System Details</span>
+                </a>
+
+                <a href="users.html" class="nav-link">
+                    <span>♙</span>
+                    <span>User Management</span>
+                </a>
+
+                <a href="sessions.html" class="nav-link">
+                    <span>♙</span>
+                    <span>User / Session</span>
+                </a>
+
+                <a href="report-issue.html" class="nav-link">
+                    <span>⚠</span>
+                    <span>Report Issue</span>
+                </a>
+                
+                <a href="issues.html" class="nav-link">
+                    <span>☷</span>
+                    <span>Issue Management</span>
+                </a>
+
+                <a href="reports.html" class="nav-link">
+                    <span>▥</span>
+                    <span>Reports</span>
+                </a>
+
+                <a href="live-status.html" class="nav-link">
+                    <span>●</span>
+                    <span>Live Status</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Bottom Navigation -->
+            <div class="sidebar-bottom">
+
+                <a href="#" class="nav-link">
+                    <span>⚙</span>
+                    <span>Settings</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+
+            <!-- Top Bar -->
+            <header class="topbar">
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        placeholder="Search systems..."
+                    >
+
+                </div>
+
+
+                <div class="topbar-right">
+
+                    <button class="notification">
+                        🔔
+                    </button>
+
+
+                    <div class="admin-profile">
+
+                        <div class="avatar">
+                            A
+                        </div>
+
+                        <div class="admin-info">
+
+                            <strong>Admin</strong>
+
+                            <small>Administrator</small>
+
+                        </div>
+
+                        <span>⌄</span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Dashboard -->
+            <section class="dashboard">
+
+
+                <!-- Page Heading -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h1>Dashboard</h1>
+
+                        <p>
+                            Monitor and manage all campus systems from one place.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="refresh-button"
+                        id="refreshButton"
+                    >
+                        ↻ Refresh
+                    </button>
+
+                </div>
+
+
+                <!-- Statistics Cards -->
+                <div class="stats-grid">
+
+
+                    <!-- Total Systems -->
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <span>Total Systems</span>
+
+                            <div class="stat-icon">
+                                ▣
+                            </div>
+
+                        </div>
+
+                        <h2 id="totalSystems">
+                            96
+                        </h2>
+
+                        <p class="stat-description">
+                            Cluster 1 . 24 tables
+                        </p>
+
+                    </div>
+
+
+                    <!-- Active Systems -->
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <span>Active Systems</span>
+
+                            <div class="stat-icon active-icon">
+                                ●
+                            </div>
+
+                        </div>
+
+                        <h2 id="activeSystems">
+                            38
+                        </h2>
+
+                        <p class="stat-description">
+
+                            <span class="success-text">
+                                79%
+                            </span>
+
+                            currently active
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- Inactive Systems -->
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <span>Inactive Systems</span>
+
+                            <div class="stat-icon inactive-icon">
+                                ●
+                            </div>
+
+                        </div>
+
+                        <h2 id="inactiveSystems">
+                            10
+                        </h2>
+
+                        <p class="stat-description">
+
+                            <span class="danger-text">
+                                21%
+                            </span>
+
+                            currently inactive
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- Issues -->
+                    <div class="stat-card">
+
+                        <div class="stat-top">
+
+                            <span>Reported Issues</span>
+
+                            <div class="stat-icon issue-icon">
+                                ⚠
+                            </div>
+
+                        </div>
+
+                        <h2 id="reportedIssues">
+                            7
+                        </h2>
+
+                        <p class="stat-description">
+                            Issues requiring attention
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Two Column Section -->
+                <div class="dashboard-grid">
+
+
+                    <!-- Status Overview -->
+                    <div class="dashboard-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <h3>
+                                    System Status Overview
+                                </h3>
+
+                                <p>
+                                    Current system availability
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="status-overview">
+
+                            <div class="status-circle">
+
+                                <div>
+
+                                    <strong id="dashboardTotal">96</strong>
+
+                                    <span>Systems</span>
+                                    
+
+                                </div>
+
+                            </div>
+
+
+                           <div class="status-legend">
+
+                       <div class="legend-item">
+
+        <span class="legend-dot working-dot"></span>
+
+        <div>
+            <strong id="workingCount">76</strong>
+            <small>Working</small>
+        </div>
+
+    </div>
+
+
+    <div class="legend-item">
+
+        <span class="legend-dot idle-dot"></span>
+
+        <div>
+            <strong id="idleCount">10</strong>
+            <small>Idle</small>
+        </div>
+
+    </div>
+
+
+    <div class="legend-item">
+
+        <span class="legend-dot offline-dot"></span>
+
+        <div>
+            <strong id="offlineCount">10</strong>
+            <small>Offline</small>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="dashboard-card cluster-summary">
+
+    <div class="card-heading">
+
+        <div>
+            <h3>Cluster One</h3>
+
+            <p>
+                System distribution across all tables
+            </p>
+        </div>
+
+        <a href="system-details.html" class="view-all">
+            View details →
+        </a>
+
+    </div>
+
+
+    <div class="cluster-info-grid">
+
+        <div class="cluster-info">
+            <strong>24</strong>
+            <span>Tables</span>
+        </div>
+
+        <div class="cluster-info">
+            <strong>96</strong>
+            <span>Total Systems</span>
+        </div>
+
+        <div class="cluster-info">
+            <strong id="clusterWorking">76</strong>
+            <span>Working</span>
+        </div>
+
+        <div class="cluster-info">
+            <strong id="clusterIdle">10</strong>
+            <span>Idle</span>
+        </div>
+
+        <div class="cluster-info">
+            <strong id="clusterOffline">10</strong>
+            <span>Offline</span>
+        </div>
+
+    </div>
+
+</div>
+
+                                <div class="legend-item">
+
+                                    <span class="legend-dot inactive-dot"></span>
+
+                                    <div>
+
+                                        <strong>
+                                            10
+                                        </strong>
+
+                                        <small>
+                                            Inactive
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Recent Activity -->
+                    <div class="dashboard-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <h3>
+                                    Recent Activity
+                                </h3>
+
+                                <p>
+                                    Latest system events
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+
+                            <div class="activity-item">
+
+                                <span class="activity-status online"></span>
+
+                                <div>
+
+                                    <strong>
+                                        PC-LAB-004 is now online
+                                    </strong>
+
+                                    <small>
+                                        2 minutes ago
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <span class="activity-status issue"></span>
+
+                                <div>
+
+                                    <strong>
+                                        Issue #104 reported
+                                    </strong>
+
+                                    <small>
+                                        12 minutes ago
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <span class="activity-status offline"></span>
+
+                                <div>
+
+                                    <strong>
+                                        PC-ADMIN-01 went offline
+                                    </strong>
+
+                                    <small>
+                                        18 minutes ago
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <span class="activity-status online"></span>
+
+                                <div>
+
+                                    <strong>
+                                        PC-LIB-003 is back online
+                                    </strong>
+
+                                    <small>
+                                        25 minutes ago
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- System Table -->
+                <div class="dashboard-card systems-preview">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <h3>
+                                System Status
+                            </h3>
+
+                            <p>
+                                Recently monitored systems
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="systems.html"
+                            class="view-all"
+                        >
+                            View all →
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        System Name
+                                    </th>
+
+                                    <th>
+                                        IP Address
+                                    </th>
+
+                                    <th>
+                                        Location
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Last Seen
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <tr>
+
+                                    <td>
+                                        PC-LAB-001
+                                    </td>
+
+                                    <td>
+                                        192.168.1.10
+                                    </td>
+
+                                    <td>
+                                        Computer Lab
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status active">
+
+                                            <span></span>
+
+                                            Active
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        2 mins ago
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        PC-LAB-002
+                                    </td>
+
+                                    <td>
+                                        192.168.1.11
+                                    </td>
+
+                                    <td>
+                                        Computer Lab
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status inactive">
+
+                                            <span></span>
+
+                                            Inactive
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        15 mins ago
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        PC-ADMIN-01
+                                    </td>
+
+                                    <td>
+                                        192.168.2.10
+                                    </td>
+
+                                    <td>
+                                        Admin Office
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status active">
+
+                                            <span></span>
+
+                                            Active
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        3 mins ago
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        PC-LIB-003
+                                    </td>
+
+                                    <td>
+                                        192.168.3.10
+                                    </td>
+
+                                    <td>
+                                        Library
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status inactive">
+
+                                            <span></span>
+
+                                            Inactive
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        28 mins ago
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

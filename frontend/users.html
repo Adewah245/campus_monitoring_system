@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>User Management - CampusTrack</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                C
+            </div>
+
+            <h2>
+                CampusTrack
+            </h2>
+
+        </div>
+
+
+        <p class="sidebar-description">
+            Campus System Monitoring
+        </p>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-link">
+                <span>⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="systems.html" class="nav-link">
+                <span>▣</span>
+                <span>System List</span>
+            </a>
+
+            <a href="clusters.html" class="nav-link">
+                <span>▦</span>
+                <span>Cluster View</span>
+            </a>
+
+            <a href="system-details.html" class="nav-link">
+                <span>▤</span>
+                <span>System Details</span>
+            </a>
+
+            <a href="users.html" class="nav-link active">
+                <span>♙</span>
+                <span>User Management</span>
+            </a>
+
+            <a href="sessions.html" class="nav-link">
+                <span>♙</span>
+                <span>User / Session</span>
+            </a>
+
+            <a href="report-issue.html" class="nav-link">
+                <span>⚠</span>
+                <span>Report Issue</span>
+            </a>
+
+            <a href="issues.html" class="nav-link">
+                <span>☷</span>
+                <span>Issue Management</span>
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                <span>▥</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="live-status.html" class="nav-link">
+                <span>●</span>
+                <span>Live Status</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-link">
+
+                <span>⚙</span>
+
+                <span>Settings</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="userSearch"
+                    placeholder="Search users..."
+                >
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification">
+                    🔔
+                </button>
+
+
+                <div class="admin-profile">
+
+                    <div class="avatar">
+                        A
+                    </div>
+
+                    <div class="admin-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <small>
+                            Administrator
+                        </small>
+
+                    </div>
+
+                    <span>
+                        ⌄
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- USER MANAGEMENT -->
+
+        <section class="dashboard">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h1>
+                        User Management
+                    </h1>
+
+                    <p>
+                        Register users and assign them to campus systems.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- REGISTER USER -->
+
+            <div class="dashboard-card user-form-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <h3>
+                            Add New User
+                        </h3>
+
+                        <p>
+                            Create a user account and assign a system.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="userForm">
+
+
+                    <div class="form-grid">
+
+
+                        <!-- FULL NAME -->
+
+                        <div class="form-group">
+
+                            <label for="fullName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Enter full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- STUDENT ID -->
+
+                        <div class="form-group">
+
+                            <label for="studentId">
+                                Student ID
+                            </label>
+
+                            <input
+                                type="text"
+                                id="studentId"
+                                placeholder="e.g. STU001"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="student@example.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- CLUSTER -->
+
+                        <div class="form-group">
+
+                            <label for="clusterSelect">
+                                Cluster
+                            </label>
+
+                            <select
+                                id="clusterSelect"
+                                required
+                            >
+
+                                <option value="">
+                                    Select cluster
+                                </option>
+
+                                <option value="1">
+                                    Cluster 1
+                                </option>
+
+                                <option value="2">
+                                    Cluster 2
+                                </option>
+
+                                <option value="3">
+                                    Cluster 3
+                                </option>
+
+                                <option value="4">
+                                    Cluster 4
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- TABLE -->
+
+                        <div class="form-group">
+
+                            <label for="userTable">
+                                Table
+                            </label>
+
+                            <select
+                                id="userTable"
+                                required
+                            >
+
+                                <option value="">
+                                    Select table
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SYSTEM -->
+
+                        <div class="form-group">
+
+                            <label for="systemSelect">
+                                System
+                            </label>
+
+                            <select
+                                id="systemSelect"
+                                required
+                            >
+
+                                <option value="">
+                                    Select system
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            + Register User
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- USER LIST -->
+
+            <div class="dashboard-card users-list-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <h3>
+                            Registered Users
+                        </h3>
+
+                        <p>
+                            Users currently assigned to campus systems.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Student ID
+                                </th>
+
+                                <th>
+                                    Name
+                                </th>
+
+                                <th>
+                                    Email
+                                </th>
+
+                                <th>
+                                    Cluster
+                                </th>
+
+                                <th>
+                                    Table
+                                </th>
+
+                                <th>
+                                    System
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="usersTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

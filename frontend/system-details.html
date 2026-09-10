@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>System Details - CampusTrack</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                C
+            </div>
+
+            <h2>
+                CampusTrack
+            </h2>
+
+        </div>
+
+
+        <p class="sidebar-description">
+            Campus System Monitoring
+        </p>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-link">
+
+                <span>⌂</span>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="systems.html" class="nav-link">
+
+                <span>▣</span>
+
+                <span>System List</span>
+
+            </a>
+
+
+            <a href="clusters.html" class="nav-link">
+
+                <span>▦</span>
+
+                <span>Cluster View</span>
+
+            </a>
+
+
+            <a
+                href="system-details.html"
+                class="nav-link active"
+            >
+
+                <span>▤</span>
+
+                <span>System Details</span>
+
+            </a>
+
+
+            <a href="sessions.html" class="nav-link">
+
+                <span>♙</span>
+
+                <span>User / Session</span>
+
+            </a>
+
+
+            <a href="report-issue.html" class="nav-link">
+
+                <span>⚠</span>
+
+                <span>Report Issue</span>
+
+            </a>
+
+
+            <a href="issues.html" class="nav-link">
+
+                <span>☷</span>
+
+                <span>Issue Management</span>
+
+            </a>
+
+
+            <a href="reports.html" class="nav-link">
+
+                <span>▥</span>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <a href="live-status.html" class="nav-link">
+
+                <span>●</span>
+
+                <span>Live Status</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-link">
+
+                <span>⚙</span>
+
+                <span>Settings</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="systemSearch"
+                    placeholder="Search systems..."
+                >
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification">
+                    🔔
+                </button>
+
+
+                <div class="admin-profile">
+
+                    <div class="avatar">
+                        A
+                    </div>
+
+                    <div class="admin-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <small>
+                            Administrator
+                        </small>
+
+                    </div>
+
+                    <span>
+                        ⌄
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- SYSTEM DETAILS -->
+
+        <section class="dashboard">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h1>
+                        System Details
+                    </h1>
+
+                    <p>
+                        View and monitor every known system
+                        across the campus clusters.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FOUR CLUSTERS -->
+
+            <div class="dashboard-card cluster-summary">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <h3>
+                            Campus Clusters
+                        </h3>
+
+                        <p>
+                            System distribution across the four campus clusters.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cluster-info-grid">
+
+
+                    <!-- CLUSTER 1 -->
+
+                    <div class="cluster-info">
+
+                        <span>
+                            Cluster 1
+                        </span>
+
+                        <strong>
+                            96
+                        </strong>
+
+                        <span>
+                            24 tables · 4 systems/table
+                        </span>
+
+                    </div>
+
+
+                    <!-- CLUSTER 2 -->
+
+                    <div class="cluster-info">
+
+                        <span>
+                            Cluster 2
+                        </span>
+
+                        <strong>
+                            33
+                        </strong>
+
+                        <span>
+                            12 tables . 4 system/table
+                        </span>
+
+                    </div>
+
+
+                    <!-- CLUSTER 3 -->
+
+                    <div class="cluster-info">
+
+                        <span>
+                            Cluster 3
+                        </span>
+
+                        <strong>
+                            53
+                        </strong>
+
+                        <span>
+                            10 tables . 4 system/table
+                        </span>
+
+                    </div>
+
+
+                    <!-- CLUSTER 4 -->
+
+                    <div class="cluster-info">
+
+                        <span>
+                            Cluster 4
+                        </span>
+
+                        <strong>
+                            44
+                        </strong>
+
+                        <span>
+                           15 tables . 4 system/table
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CLUSTER ONE SUMMARY -->
+
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Cluster
+                        </span>
+
+                        <div class="stat-icon">
+                            ▦
+                        </div>
+
+                    </div>
+
+                    <h2>
+                        1
+                    </h2>
+
+                    <p class="stat-description">
+                        Cluster One
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Tables
+                        </span>
+
+                        <div class="stat-icon">
+                            ▤
+                        </div>
+
+                    </div>
+
+                    <h2>
+                        24
+                    </h2>
+
+                    <p class="stat-description">
+                        Table 1 - Table 24
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Systems
+                        </span>
+
+                        <div class="stat-icon">
+                            ▣
+                        </div>
+
+                    </div>
+
+                    <h2 id="detailsTotal">
+                        96
+                    </h2>
+
+                    <p class="stat-description">
+                        4 systems per table
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Working
+                        </span>
+
+                        <div class="stat-icon active-icon">
+                            ●
+                        </div>
+
+                    </div>
+
+                    <h2 id="detailsWorking">
+                        96
+                    </h2>
+
+                    <p class="stat-description">
+                        Currently working
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SYSTEM TABLE -->
+
+            <div class="dashboard-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <h3>
+                            Cluster One Systems
+                        </h3>
+
+                        <p>
+                            24 tables · 4 systems per table
+                        </p>
+
+                    </div>
+
+
+                    <select
+                        id="tableFilter"
+                        class="table-filter"
+                    >
+
+                        <option value="all">
+                            All Tables
+                        </option>
+
+                        <option value="1">Table 1</option>
+                        <option value="2">Table 2</option>
+                        <option value="3">Table 3</option>
+                        <option value="4">Table 4</option>
+                        <option value="5">Table 5</option>
+                        <option value="6">Table 6</option>
+                        <option value="7">Table 7</option>
+                        <option value="8">Table 8</option>
+                        <option value="9">Table 9</option>
+                        <option value="10">Table 10</option>
+                        <option value="11">Table 11</option>
+                        <option value="12">Table 12</option>
+                        <option value="13">Table 13</option>
+                        <option value="14">Table 14</option>
+                        <option value="15">Table 15</option>
+                        <option value="16">Table 16</option>
+                        <option value="17">Table 17</option>
+                        <option value="18">Table 18</option>
+                        <option value="19">Table 19</option>
+                        <option value="20">Table 20</option>
+                        <option value="21">Table 21</option>
+                        <option value="22">Table 22</option>
+                        <option value="23">Table 23</option>
+                        <option value="24">Table 24</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>System</th>
+
+                                <th>Table</th>
+
+                                <th>IP Address</th>
+
+                                <th>Status</th>
+
+                                <th>Last Activity</th>
+
+                                <th>Uptime</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="systemsTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FULL SYSTEM INFORMATION -->
+
+            <div
+                class="dashboard-card selected-system"
+                id="selectedSystem"
+            >
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <h3>
+                            Select a system
+                        </h3>
+
+                        <p>
+                            Click "View" on a system above
+                            to see its full information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
