@@ -22,7 +22,7 @@
         <aside class="sidebar">
 
             <div class="logo">
-                <div class="logo-icon">C</div>
+                <div class="logo-icon">CW</div>
                 <h2>CampusWatch</h2>
             </div>
 
@@ -54,9 +54,9 @@
                     <span>System Details</span>
                 </a>
 
-                <a href="users.html" class="nav-link">
+                <a href="admin-login.html" class="nav-link">
                     <span>♙</span>
-                    <span>User Management</span>
+                    <span>Admin</span>
                 </a>
 
                 <a href="sessions.html" class="nav-link">
@@ -90,9 +90,13 @@
             <!-- Bottom Navigation -->
             <div class="sidebar-bottom">
 
-                <a href="#" class="nav-link">
-                    <span>⚙</span>
-                    <span>Settings</span>
+                <a href="#" 
+                   onclick="logoutAdmin()" 
+                   class="nav-link">
+
+                   <span>↪</span>
+                   <span>Logout</span>
+
                 </a>
 
             </div>
@@ -127,6 +131,10 @@
 
 
                     <div class="admin-profile">
+
+                        <button id="logoutbutton">
+                            Logout
+                        </button>
 
                         <div class="avatar">
                             A
